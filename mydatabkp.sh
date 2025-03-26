@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRC_DIR="/home/"
+SRC_DIR="/home/SRC_DIR"
 DST_DIR="/home/"
 
 if [ ! -d "$SRC_DIR" ]; then
