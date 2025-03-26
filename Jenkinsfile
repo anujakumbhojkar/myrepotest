@@ -11,19 +11,19 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'mvn clean package' // Replace with your build command
+                sh 'building' // Replace with your build command
             }
         }
         
         stage('Test') {
             steps {
-                sh 'mvn test' // Replace with your test command
+                sh 'testing'
             }
         }
         
         stage('Deploy') {
             steps {
-                sh 'scp target/*.jar user@server:/deploy-path/' // Replace with your deployment steps
+                sh 'deployed'
             }
         }
     }
