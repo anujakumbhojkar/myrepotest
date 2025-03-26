@@ -4,26 +4,26 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-               git branch: 'main', url: 'https://github.com/anujakumbhojkar/myrepotest.git'
+                git branch: 'main', url: 'https://github.com/anujakumbhojkar/myrepotest.git'
 
             }
         }
         
         stage('Build') {
             steps {
-                sh 'building' // Replace with your build command
+                sh 'mvn clean package' // Replace with your build command
             }
         }
         
         stage('Test') {
             steps {
-                sh 'testing'
+                sh 'mvn test' // Replace with your test command
             }
         }
         
         stage('Deploy') {
             steps {
-                sh 'deployed'
+                sh 'scp target/*.jar user@server:/deploy-path/' // Replace with your deployment steps
             }
         }
     }
