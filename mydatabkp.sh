@@ -14,6 +14,7 @@ fi
 
 for file in "$SRC_DIR"/*; do
     cp "$file" "$DST_DIR"
+    echo "File backup done"
 done
 
 
